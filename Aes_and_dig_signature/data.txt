@@ -1,2 +1,0 @@
-Nazywam się Mikołaj Kołodziej, jestem studentem 1 roku, 2 semestru kierunku cyberbezpieczeństwo na
-politechnice wrocławskiej. Przedstawiam Państwu skrypt, który szyfruje dane metodą AES.
