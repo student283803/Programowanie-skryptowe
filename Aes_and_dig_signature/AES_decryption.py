@@ -30,7 +30,6 @@ def decryption (
             print(f"dane zostaly odszyfrowane i zapisane w pliku {decrypted_file}")
     except (ValueError, KeyError) as e:
         print ("blad deszyfrowania")
-        print(e)
 
 
 

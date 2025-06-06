@@ -14,7 +14,7 @@ def main():
     public_key_file = "public_key_file.pem"
     signature_file = "signature.sig"
 
-    encryption(
+    """encryption(
         file_to_encrypt,
         encrypted_file,
         key_file,
@@ -28,7 +28,7 @@ def main():
         tag_file,
         decrypted_file
     )
-
+"""
     dsf.generate_keys(private_key_file, public_key_file)
     dsf.sign_file(file_to_sign, private_key_file, signature_file)
     dsf.verify_signature(file_to_sign, signature_file, public_key_file)
@@ -39,7 +39,7 @@ def main():
         file.write("\nTa linijka narusza integralnosc")
 
     print("ponowna weryfkacja:")
-    dsf.verify_signature(file_to_sign, signature_file, public_key_file)
+    dsf.verify_signature(signature_file,file_to_sign, public_key_file)
 
 if __name__ == "__main__":
     main()

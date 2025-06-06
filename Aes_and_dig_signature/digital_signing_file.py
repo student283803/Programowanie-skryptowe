@@ -54,7 +54,7 @@ def sign_file(file_path, private_key_path, signature_path = "signature.sig"):
     print(f"Signature created in '{signature_path}', File '{file_path}' was signed")
 
 
-def verify_signature(signature_path, file_path, public_key_path):
+def verify_signature(file_path, signature_path, public_key_path):
     with open(public_key_path, "rb") as key_file:
         public_key = serialization.load_pem_public_key(
             key_file.read(),
@@ -79,6 +79,7 @@ def verify_signature(signature_path, file_path, public_key_path):
         return True
     except Exception as e:
         print("Signature verification failed")
+        print(e)
         return False
 
 
